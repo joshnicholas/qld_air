@@ -1,9 +1,6 @@
 name: scrape_air_quality
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     - cron: "0 * * * *"
 
@@ -11,10 +8,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🍽️ Get working copy
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1                                                                 
+#       - name: 🍽️ Get working copy
+#         uses: actions/checkout@master
+#         with:
+#           fetch-depth: 1                                                                 
       - name: 🐍 Set up Python 3.8                               
         uses: actions/setup-python@v2                               
         with:                                 
