@@ -21,5 +21,5 @@ for station in root.iter('station'):
 
 df = pd.DataFrame(listo)
 
-with open("air_qualtiy.csv", "w") as f:
+with open("air_quality.csv", "w") as f:
     df.to_csv(f,index=False)
