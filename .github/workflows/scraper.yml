@@ -12,14 +12,12 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🍽️ Get working copy
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1                                                                 
-      - name: 🐍 Set up Python 3.8                               
-        uses: actions/setup-python@v2                               
+      - name: Get working copy
+        uses: actions/checkout@master                                                               
+      - name: Set up Python 3.8                               
+        uses: actions/setup-python@master                               
         with:                                 
-          python-version: '3.8'                                                   
+          python-version: 3.8                                                   
   
       - name: 💿 Install Requirements                             
         run: pip install -r requirements.txt
