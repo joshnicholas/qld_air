@@ -1,6 +1,10 @@
 name: scrape_air_quality
 
 on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
   schedule:
     - cron: "9 * * * *"
 
